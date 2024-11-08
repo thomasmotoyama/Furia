@@ -1,0 +1,245 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    padding: 16px 20px;
+    background-color: black;
+    color: white;
+    font-family: "Galada", cursive;
+    font-weight: 400;
+    font-style: normal;
+    display: flex; /* Usamos flexbox para alinhar os itens */
+    justify-content: space-between; /* Distribui o título e a logo ao longo da linha */
+    align-items: center; /* Alinha verticalmente */
+}
+
+section .container h1 {
+    font-size: 150px;
+    margin-left: 460px; /* Adiciona margem para dar um pouco de espaçamento */
+    font-family: "Galada", cursive;
+}
+
+header .furia-logo {
+    height: 100px;
+    margin-left: 585px;
+}
+
+header nav {
+    text-align: right;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav li {
+    display: inline-block;
+    margin-left: 16px;
+}
+
+header nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav li a:hover {
+    color: #ff6f00; /* Cor de hover para links de navegação */
+}
+
+/* Container principal */
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Seção - sobre a equipe */
+section {
+    padding: 24px 0;
+    background-color: #fff;
+}
+
+section .container h2 {
+    justify-content: space-between;
+    display: inline;
+    font-size: 85%;
+    margin-left: 80px;
+}
+
+section .container p {
+    font-size: large;
+}
+
+section .team h2 {
+    margin-left: 500px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.team-photo {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Espaçamento entre as imagens */
+    flex-wrap: wrap; /* Permite que as imagens quebrem para uma nova linha em telas menores */
+}
+
+.team-photo img {
+    height: 215px;
+    width: 205px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.team-photo img:hover {
+    transform: scale(1.1);
+    border-color: #ff6f00;
+}
+
+/* Seção de contato */
+#contact .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+form input,
+form textarea,
+form button {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 12px;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+form textarea {
+    resize: none;
+    height: 180px;
+}
+
+form input:focus, 
+form textarea:focus {
+    border-color: #333;
+    outline: none;
+}
+
+form button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #333;
+}
+
+/* Links de redes sociais */
+.social-links img {
+    height: 24px;
+}
+
+.social-links li {
+    display: inline;
+    margin-right: 8px;
+}
+
+.social-links li a {
+    text-decoration: none;
+}
+
+.social-links li a:hover {
+    color: black;
+}
+
+/* Rodapé */
+footer {
+    background-color: black;
+    color: #ecf0f1;
+    padding: 16px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 3rem; /* Ajuste do tamanho da fonte em telas médias */
+    }
+
+    header .furia-logo {
+        height: 80px; /* Ajuste da altura da logo para telas menores */
+    }
+
+    .team-photo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-methods {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        max-width: 90%; /* Formulário mais flexível */
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem; /* Reduz o tamanho do título em telas pequenas */
+    }
+
+    .team-photo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-methods {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        width: 100%;
+        max-width: 90%;
+    }
+}
